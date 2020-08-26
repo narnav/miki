@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+</div>
+
+<div class="topnav">
+  <a href="a.html" class="btn btn-primary" target="main">aaa</a>
+  <a href="b.html" target="main">bbbb</a>
+  <a href="c.html" target="main">ccccc</a>
+</div>
+<div class="row">
+    <div class="column" style="width: 25%;">
+      <h2>Menu</h2>
+      <h1>
+     <ul>
+        <li><a href="a.html" target="main" class="btn btn-primary">aaa</a></li>
+        <li><a href="b.html" target="main" class="btn btn-success">bbbb</a></li>
+        <li> <a href="c.html" target="main" class="btn btn-danger">ccccc</a></li>
+    </ul></h1>
+    </div>
+    
+    <div class="column" style="width: 50%;height: 550px;">
+      <h1>My Car</h1>
+      <iframe name="main" width="100%" height="550px"></iframe>
+    </div>
+    
+    <div class="column" style="width: 25%;height: 550px;">
+        <div class="card" style="width: 18rem;">
+            <img src="images/c2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</body>
+</html>
